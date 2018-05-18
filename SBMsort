@@ -3,5 +3,5 @@ usning nemspace std;
 int main(){
 
 	
-	
+return 0;	
 }
