@@ -1,4 +1,4 @@
-//Selection_Sort
+//select
 #include<iostream>
 #include<cstdlib>
 using namespace std;
@@ -30,19 +30,18 @@ int main(){
 	cout<<endl<<endl;
 	return 0;
 }
-
-//Bubble_Sort
+//bubble
 #include<iostream>
 using namespace std;
 int main(){
-	int BubbleSort[]={98,95,43,56,78,21,2};
+	int BubbleSort[]={4,6,8,3,1,0,5};
 	cout<<"sebelum"<<endl;
-	for (int i=0;i<6;i++){
+	for (int i=0;i<7;i++){
 		cout<<' '<<BubbleSort[i];
 	}
 	cout<<endl<<endl;
-	for(int i=0;i<=6;i++){
-		for(int j=i+1;j<=6;j++){
+	for(int i=0;i<=7;i++){
+		for(int j=i+1;j<=7;j++){
 			int temp;
 			if(BubbleSort[i]>BubbleSort[j]){
 				temp=BubbleSort[i];
@@ -53,8 +52,8 @@ int main(){
 		}
 	}
 		
-		cout<<"sebelum"<<endl;
-	for (int i=0;i<6;i++){
+		cout<<"sesudah"<<endl;
+	for (int i=0;i<7;i++){
 		cout<<' '<<BubbleSort[i];
 		
 }
@@ -62,7 +61,7 @@ return 0;
 
 }
 
-//Merge_Sort
+//merge
 #include <iostream>
 using namespace std; 
 
