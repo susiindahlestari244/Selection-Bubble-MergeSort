@@ -62,4 +62,56 @@ return 0;
 
 }
 
+//Merge_Sort
+#include <iostream>
+using namespace std; 
 
+void Array(int *array, int n) {
+  for (int i = 0; i < n; ++i)
+    cout <<' '<<array[i];
+    cout<<endl;
+}
+void Merge(int arr[], int low, int  mid, int high){
+    int *temp = new int[high-low+1];
+    int i = low, j = mid + 1;
+    int k = 0;
+    while(i <= mid && j <=high){
+        if(arr[i] <= arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+  
+    while(i <= mid)
+        temp[k++] = arr[i++];
+        temp[k++] = arr[j++];
+   
+    for(k = 0, i = low; i <= high; ++i, ++k)
+        arr[i] = temp[k];
+ 
+    delete []temp;
+}
+void MergeSortHelper(int arr[], int low, int high){
+    int mid;
+    if(low < high){
+        mid = (low + high) >> 1;
+        MergeSortHelper(arr, low, mid);
+        MergeSortHelper(arr, mid+1, high);
+        Merge(arr, low, mid, high);
+    }
+}
+void MergeSort(int arr[], int arr_size){
+    MergeSortHelper(arr, 0, arr_size-1);
+}
+ 
+int main() {
+  int array[] = {8,7,6,5,4,3,2,1};
+  int n = sizeof(array)/sizeof(array[0]);
+ 
+  cout << "Sebelum  :" <<endl;
+  Array(array, n);
+  MergeSort(array, n);
+  cout << "Sesudah :" << endl;
+  Array(array, n);
+  return (0);
+}
