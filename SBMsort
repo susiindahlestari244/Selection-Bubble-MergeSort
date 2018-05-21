@@ -1,4 +1,6 @@
-//select
+//Nama : Mayda Brilliani Fauzi 17171051003
+//       Susi Indah Lestari 1717051035
+//selection_sort
 #include<iostream>
 #include<cstdlib>
 using namespace std;
@@ -30,7 +32,7 @@ int main(){
 	cout<<endl<<endl;
 	return 0;
 }
-//bubble
+//bubble-sort
 #include<iostream>
 using namespace std;
 int main(){
@@ -61,7 +63,7 @@ return 0;
 
 }
 
-//merge
+//merge_sort
 #include <iostream>
 using namespace std; 
 
